@@ -43,13 +43,13 @@
 2. 添加到环境变量,像java一样 ：  新建 MAVEN_HOME:D:\Java\apache-maven-3.3.9，追加到path:%MAVEN_HOME%\bin
 3. 测试是否安装成功
 >    在cmd中输入：
-C:\Users\miaorf>mvn -version
-Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-11T00:41:47+08:00)
-Maven home: D:\Java\apache-maven-3.3.9\bin\..
-Java version: 1.8.0_73, vendor: Oracle Corporation
-Java home: D:\Java\jdk1.8.0_73\jre
-Default locale: zh_CN, platform encoding: GBK
-OS name: "windows 10", version: "10.0", arch: "amd64", family: "dos"
+> C:\Users\miaorf>mvn -version
+>Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-11T00:41:47+08:00)
+>Maven home: D:\Java\apache-maven-3.3.9\bin\..
+>Java version: 1.8.0_73, vendor: Oracle Corporation
+>Java home: D:\Java\jdk1.8.0_73\jre
+>Default locale: zh_CN, platform encoding: GBK
+>OS name: "windows 10", version: "10.0", arch: "amd64", family: "dos"
 
 
 ## <a name="run"/>clone code and run
