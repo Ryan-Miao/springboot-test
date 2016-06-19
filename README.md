@@ -54,7 +54,8 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "dos"
 
 ## <a name="run"/>clone code and run
 在d盘创建一个你放代码的地方，比如：d:/workspace.cmd进入d盘并clone：
->
+> git clone git@github.com:chenxing12/springboot-test.git
+![clone](src/main/webapp/images/clone.png "clone")
 
 
 
