@@ -117,4 +117,12 @@ D:\workspace\springboot-test>mvn spring-boot:run
  :: Spring Boot ::        (v1.3.5.RELEASE)
 ```
 
+打开浏览器输入：
+```
+http://localhost:8080/ajax/info.html
+```
+![info](src/main/webapp/images/info.png "info")
+
 ## Teach ajax by springboot
+环境安装成功后就可以测试ajax了。更多介绍点击[ajax](./doc/ajax.md)
+

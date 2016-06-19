@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ajax teach</title>
+    <script src="/js/jquery/jquery-1.12.0.js"></script>
 </head>
 <body>
 <h1>This is tell how ajax work!</h1>
@@ -11,6 +12,83 @@
     <h2>ajax是一种请求数据的方法</h2>
     你以前写的东西叫做静态网页。就是网页里的数据是什么样子的，页面最终就显示什么样子的。
     但实际上，我们的数据都是存放到数据库的，然后请求数据库的数据，填充到网页。
+</div>
+<div>
+    这里是一个简单的例子，使用jquery的ajax方法：<br/>
+    我想要获取所有用户信息并输入到table中。获取所有数据的方法是浏览器访问：
+    http://localhost:8080/userList。你现在浏览器输入http://localhost:8080/userList，
+    然后看看得到的响应结果。应该是这样的：
+    <pre>[
+    {
+        "username": "Ryan",
+        "password": "123456",
+        "age": 18,
+        "birth": "1991-02-23",
+        "sex": "man"
+    },
+    {
+        "username": "Leslie",
+        "password": "password",
+        "age": 18,
+        "birth": "1993-02-23",
+        "sex": "woman"
+    },
+    {
+        "username": "XiaoMing",
+        "password": "bugaosuni",
+        "age": 8,
+        "birth": "1891-12-03",
+        "sex": "man"
+    },
+    {
+        "username": "Tom",
+        "password": "chiru",
+        "age": 28,
+        "birth": "1981-02-23",
+        "sex": "man"
+    }
+]</pre>
+    <table border="1px solid" id="user_list">
+        <tr>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+
+    </table>
+    <a href="javascript:getUsers()">获取所有用户</a>
+    <br/>
+    <script>
+        function getUsers() {
+            $.ajax({
+                url: "/user/userList",
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    //data数据
+                    console.log(data)
+                    for(var element in data){
+                        //将json Array的每一项取出来
+                        user = data[element];
+                        console.log(user);
+                        console.log(user.username+'-'+user.age+"-"+user.sex);
+                        var template = "<tr> " +
+                                "<td>" +user.username+ "</td>" +
+                                "<td>" +user.password+ "</td> " +
+                                "<td>" +user.age+ "</td> " +
+                                "<td>" +user.sex+ "</td>" +
+                                "<td>修改/删除</td>" +
+                                "</tr>";
+                        $("#user_list").append(template);
+                    }
+
+                }
+            });
+        }
+
+    </script>
 
 </div>
 </body>

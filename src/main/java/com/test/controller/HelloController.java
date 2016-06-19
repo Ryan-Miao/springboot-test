@@ -25,8 +25,8 @@ public class HelloController {
 
     @RequestMapping("/json")
     @ResponseBody
-    public Map json(){
-        Map map = new HashMap();
+    public Map<String,Object> json(){
+        Map<String,Object> map = new HashMap<String,Object>();
         map.put("name","Ryan");
         map.put("age","18");
         map.put("sex","man");
