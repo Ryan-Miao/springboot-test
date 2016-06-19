@@ -31,7 +31,7 @@
 5. 测试是否安装成功。
 >    打开命令提示符（开始》运行》cmd 或win+r 输入cmd）输入java -version 和javac -version。如果显示如下则安装成功
 >![cmd](src/main/webapp/images/cmd.png "cmd")
-     C:\Users\miaorf>java -version
+>     C:\Users\miaorf>java -version
      java version "1.8.0_77"
      Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
      Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
