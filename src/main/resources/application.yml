@@ -1,5 +1,5 @@
 spring.output.ansi.enabled: always
 logging.file: log/test.log
 logging.level.root: WARN
-logging.level.org.springframework.web: DEBUG
+logging.level.org.springframework.web: ERROR
 logging.level.org.hibernate: ERROR
