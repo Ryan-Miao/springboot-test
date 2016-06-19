@@ -28,10 +28,9 @@
 ![javahome](src/main/webapp/images/javahome.png "JAVA_HOME")
 >    将%JAVA_HOME%/bin;追加到path环境变量。若path变量结尾没有分号，则先添加分号，注意是英文的分号
 ![path](src/main/webapp/images/path.png "path")
-5. 测试是否安装成功。
+5. 测试是否安装成功。   打开命令提示符（开始》运行》cmd 或win+r 输入cmd）输入java -version 和javac -version。如果显示如下则安装成功
+            ![cmd](src/main/webapp/images/cmd.png "cmd")
 ```
-   打开命令提示符（开始》运行》cmd 或win+r 输入cmd）输入java -version 和javac -version。如果显示如下则安装成功
-![cmd](src/main/webapp/images/cmd.png "cmd")
      C:\Users\miaorf>java -version
      java version "1.8.0_77"
      Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
@@ -58,8 +57,64 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "dos"
 在d盘创建一个你放代码的地方，比如：d:/workspace.cmd进入d盘并clone：
 ```
  git clone git@github.com:chenxing12/springboot-test.git
+```
 ![clone](src/main/webapp/images/clone.png "clone")
 
+运行项目：
+```
+mvn spring-boot:run
+```
+如果运行成功，则显示如下：
+```
+D:\workspace>cd springboot-test
+
+D:\workspace\springboot-test>mvn spring-boot:run
+[INFO] Scanning for projects...
+[WARNING]
+[WARNING] Some problems were encountered while building the effective model for com.test:springboot-test:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 49, column 21
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING]
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building springboot-test 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) > test-compile @ springboot-test >>>
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ springboot-test ---
+[WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ springboot-test ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding GBK, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to D:\workspace\springboot-test\target\classes
+[WARNING] /D:/workspace/springboot-test/src/main/java/com/test/controller/HelloController.java: D:\workspace\springboot-test\src\main\java\com\test\controller\HelloController.java使用了未经检查或不安全的操作。
+[WARNING] /D:/workspace/springboot-test/src/main/java/com/test/controller/HelloController.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ springboot-test ---
+[WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\workspace\springboot-test\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ springboot-test ---
+[INFO] No sources to compile
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) < test-compile @ springboot-test <<<
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) @ springboot-test ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.5.RELEASE)
 ```
 
 ## Teach ajax by springboot
