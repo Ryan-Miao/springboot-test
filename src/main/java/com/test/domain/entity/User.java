@@ -12,9 +12,11 @@ public class User implements Serializable{
     private int age;
     private String birth;
     private String sex;
+    private int id;
 
 
-    public User(String username, String password, int age, String birth, String sex) {
+    public User(int id,String username, String password, int age, String birth, String sex) {
+        this.id=id;
         this.username = username;
         this.password = password;
         this.age = age;
@@ -40,5 +42,13 @@ public class User implements Serializable{
 
     public String getSex() {
         return sex;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

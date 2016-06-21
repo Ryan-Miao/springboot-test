@@ -18,36 +18,42 @@
     我想要获取所有用户信息并输入到table中。获取所有数据的方法是浏览器访问：
     http://localhost:8080/userList。你现在浏览器输入http://localhost:8080/userList，
     然后看看得到的响应结果。应该是这样的：
-    <pre>[
+    <pre>
+[
     {
         "username": "Ryan",
         "password": "123456",
         "age": 18,
         "birth": "1991-02-23",
-        "sex": "man"
+        "sex": "man",
+        "id": 0
     },
     {
         "username": "Leslie",
         "password": "password",
         "age": 18,
         "birth": "1993-02-23",
-        "sex": "woman"
+        "sex": "woman",
+        "id": 1
     },
     {
         "username": "XiaoMing",
         "password": "bugaosuni",
         "age": 8,
         "birth": "1891-12-03",
-        "sex": "man"
+        "sex": "man",
+        "id": 2
     },
     {
         "username": "Tom",
         "password": "chiru",
         "age": 28,
         "birth": "1981-02-23",
-        "sex": "man"
+        "sex": "man",
+        "id": 3
     }
-]</pre>
+]
+    </pre>
     <table border="1px solid" id="user_list">
         <tr>
             <th>用户名</th>
@@ -79,13 +85,17 @@
                                 "<td>" +user.password+ "</td> " +
                                 "<td>" +user.age+ "</td> " +
                                 "<td>" +user.sex+ "</td>" +
-                                "<td>修改/删除</td>" +
+                                "<td><a href='javascript:modify("+user.id+");' >修改</a>/删除</td>" +
                                 "</tr>";
                         $("#user_list").append(template);
                     }
 
                 }
             });
+        }
+
+        function modify(uid){
+
         }
 
     </script>
