@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by miaorf on 2016/6/19.
@@ -26,6 +27,19 @@ public class UserRepository {
         return users;
     }
 
+    public User addUser(User user){
+        user.setId(SEQUENCE++);
+        users.add(user);
+        return user;
+    }
 
 
+    public boolean delete(int id) {
+        Optional<User> userOptional = users.stream().filter((user) -> user.getId() == id).findFirst();
+        if (userOptional.isPresent()){
+            User user = userOptional.get();
+            users.remove(user);
+        }
+        return true;
+    }
 }

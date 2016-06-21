@@ -14,13 +14,43 @@ public class User implements Serializable{
     private String sex;
     private int id;
 
+    public User() {
+    }
 
-    public User(int id,String username, String password, int age, String birth, String sex) {
+    public User(String username, String password, int age, String birth, String sex) {
+        this.username = username;
+        this.password = password;
+        this.age = age;
+        this.birth = birth;
+        this.sex = sex;
+    }
+
+    public User(int id, String username, String password, int age, String birth, String sex) {
         this.id=id;
         this.username = username;
         this.password = password;
         this.age = age;
         this.birth = birth;
+        this.sex = sex;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
+    }
+
+    public void setSex(String sex) {
         this.sex = sex;
     }
 

@@ -19,4 +19,12 @@ public class UserService {
     public List<User> getUsers(){
         return userRepository.getUsers();
     }
+
+    public User addUser(User user){
+        return userRepository.addUser(user);
+    }
+
+    public boolean delete(int id) {
+        return userRepository.delete(id);
+    }
 }
