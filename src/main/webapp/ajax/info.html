@@ -169,30 +169,33 @@ width: 500px; height: 800px; display: none;position: absolute;
             alert(uid)
         }
         function del(uid){
-            console.log(uid)
-            console.log("dele_"+uid)
-            $("#dele_"+uid).remove()
-            $.ajax({
-                url: "http://localhost:8080/user/deleteUser",
-                type: "post",
-                dataType: "json",
-                data:{id:uid},
-                success: function (data) {
-                    //data数据
-                    console.log(data.status)
-                    if(data.status==200){
-                        alert("success!!!")
-                    }else{
-                        alert("failed:"+data.msg);
+            if (confirm("真的要删除吗？")){
+                console.log(uid)
+                console.log("dele_"+uid)
+                $("#dele_"+uid).remove()
+                $.ajax({
+                    url: "http://localhost:8080/user/deleteUser",
+                    type: "post",
+                    dataType: "json",
+                    data:{id:uid},
+                    success: function (data) {
+                        //data数据
+                        console.log(data.status)
+                        if(data.status==200){
+                            alert("success!!!")
+                        }else{
+                            alert("failed:"+data.msg);
+                        }
+
+
+                    },
+                    error:function (data) {
+                        console.log(data)
                     }
 
+                });
+            }
 
-                },
-                error:function (data) {
-                    console.log(data)
-                }
-
-            });
 //            $("#dele").remove()
         }
     </script>
