@@ -26,7 +26,8 @@ width: 500px; height: 800px; display: none;position: absolute;
 <div>
     <h2>ajax是一种请求数据的方法</h2>
     你以前写的东西叫做静态网页。就是网页里的数据是什么样子的，页面最终就显示什么样子的。
-    但实际上，我们的数据都是存放到数据库的，然后请求数据库的数据，填充到网页。
+    但实际上，我们的数据都是存放到数据库的，然后请求数据库的数据，填充到网页.
+    。
 </div>
 <div>
     这里是一个简单的例子，1使用jquery的ajax方法：<br/>
@@ -170,6 +171,32 @@ width: 500px; height: 800px; display: none;position: absolute;
         }
         function del(uid){
             console.log(uid)
+            console.log("dele_"+uid)
+            $("#dele_"+uid).remove()
+            $.ajax({
+                url: "http://localhost:8080/user/deleteUser",
+                type: "post",
+                dataType: "json",
+                data:{id:uid},
+                success: function (data) {
+                    //data数据
+                    console.log(data.status)
+                    if(data.status==200){
+                        alert("success!!!")
+                    }else{
+                        alert("failed:"+data.msg);
+                    }
+
+
+                },
+                error:function (data) {
+                    console.log(data)
+                }
+
+            });
+//            $("#dele").remove()
+        }
+        if (confirm("真的要删除吗？")){console.log(uid)
             console.log("dele_"+uid)
             $("#dele_"+uid).remove()
             $.ajax({
