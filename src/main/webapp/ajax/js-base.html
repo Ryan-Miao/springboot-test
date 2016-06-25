@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-base</title>
+    <script src="../js/jquery/jquery-1.12.0.js"></script>
+</head>
+<body>
+<div>
+    <a href="jq-base.html">jquery-base</a>
+
+
+    <h2>js 变量</h2>
+    <pre>
+    变量有作用域，分全局变量，局部变量。
+    全局变量：是指在整个dom可用，即整个页面都可以用。
+        <input type="button" value="函数a" onclick="a()">    <input type="button" value="函数b" id="btn_b">
+
+
+        变量需要赋值，赋值用等号表示（=）
+
+        aa=1
+        bb=2
+        aa=bb
+        console.log(aa) --> 2
+
+    <script>
+        var mrf= "Ryan";
+        pxy = 'Lesilie'
+
+        function  a() {
+            console.log(mrf)
+            console.log(pxy)
+
+            var mrf1="小号"
+        }
+
+        console.log(mrf)
+//        console.log(mrf1)  出错
+
+
+        function b() {
+            console.log(mrf)
+            console.log(pxy)
+
+//            console.log(mrf1) undefined
+
+        }
+
+        $("#btn_b").click(function () {
+            console.log("我被点击了")
+            b();
+        });
+
+    </script>
+    </pre>
+</div>
+
+<div>
+    <h2>js 数据类型</h2>
+    <pre>
+        js 有几种基本数据类型：number, string, boolean, undefined, null.
+
+        其他：
+            数组 ['','s',1,true]
+            json {
+                    keys:value1,
+                    key2:value2
+                }
+
+        var mrf ='Ryan'
+        var age =18;
+        isMan = true;
+        where = undefined;
+        want = null;
+
+        比较：
+        aa=1;
+        bb=2;
+        var cc= aa>bb;
+        console.log(cc)
+
+        ==表示是否相等， 因为一个=表示赋值。
+        aa==b
+
+        mrf='Ryan'
+        mrf1="ryan"
+        console.log(mrf==mrf1)
+
+    </pre>
+</div>
+
+<div>
+    <h2>条件判断 if</h2>
+    <pre>
+        if(aa==bb){
+            console.log()
+        }else{
+
+        }
+    </pre>
+
+    <h2>循环  for</h2>
+
+    <pre>
+    for( ele in all){
+        console.log(ele)
+    }
+
+    all是一个很多的ele的集合。比如数组：
+    aa=[1,2,3,4,7,9]
+    获取某个元素（索引为a）：aa[a]
+    获取数组的长度：    aa.length
+
+    for(a in aa){
+        console.log(aa[a])
+    }
+
+
+     for( var i = 0; i<100; i++){
+          console.log(i)
+      }
+
+
+     json:
+
+        {
+            name: ‘Ryan’,
+            age: 18,
+            sex: 'man'
+        }
+
+        aa ={
+            name: 'Ryan',
+            age: 18,
+            sex: 'man'
+        }
+
+
+        aa.name
+        aa.age
+
+
+        while(条件是true){
+            dddddd
+        }
+
+            aa=1;
+        while(true){
+            console.log(++aa)
+        }
+
+        while(aa<30){
+            console.log(++aa)
+        }
+
+==================================================================
+        var sum=0;
+
+        aa=1
+        while(aa<=100){
+            sum = sum + aa;
+            aa = aa+1;//  == ++a;
+        }
+
+        console.log(sum)
+        ---------------------------------
+        var sum =0;
+
+        for(i=1; i<=100; i++){
+            <!--sum = sum + i;-->
+                sum += i;
+
+        }
+
+        console.log(sum)
+
+
+        =======================================================
+
+
+    </pre>
+
+
+
+
+
+</div>
+
+</body>
+</html>

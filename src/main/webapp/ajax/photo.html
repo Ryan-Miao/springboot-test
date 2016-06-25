@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>photo</title>
-    <script src="/js/jquery/jquery-1.12.0.js"></script>
+    <script src="../js/jquery/jquery-1.12.0.js"></script>
     <style type="text/css">
-
         ul{
-            list-style: none;
+            list-style:none;
         }
         li{
-            float: left;
-            padding-left: 10px;
-        }
-        .main{
             position: relative;
-            height: 200px;
-            weight:300px;
-            display:block;
+            float:left;
+            padding-left:10px;
+            display:inline-block;
+            width: 300px;
+            height:200px;
         }
-       .xx {
-           position: relative;
-           margin-top: -200px;
-           margin-left: -30px;
-       }
+        .ph{
+            width: 200px;
+            height: 200px;
+        }
+
+        .xx{
+            position: relative;
+            width:60px;
+            height:60px;
+            margin-left: -63px;
+            margin-bottom:125px;
+        }
+
     </style>
 </head>
 <body>
- <div>
-     <ul>
-         <li class="main"><img src="/images/photo.png" class="first"><img src="/images/xx.png" class="xx"></li>
-         <li class="main"><img src="/images/photo.png"></li>
-         <li class="main"><img src="/images/photo.png"></li>
-         <li class="main"><img src="/images/photo.png"></li>
-         <li class="main"><img src="/images/photo.png"></li>
-         <li class="main"><img src="/images/photo.png"></li>
+<h2>photo remove</h2>
 
-     </ul>
- </div>
+<ul>
+    <li class="li_ph"><img src="../images/ajax.png" title="1" class="ph"><img src="../images/xx.png"  class="xx"></li>
+    <li class="li_ph"><img src="../images/ajax.png" title="2" class="ph"><img src="../images/xx.png"  class="xx"></li>
+    <li class="li_ph"><img src="../images/ajax.png" title="3" class="ph"><img src="../images/xx.png"  class="xx"></li>
+    <li class="li_ph"><img src="../images/ajax.png" class="ph"><img src="../images/xx.png"  class="xx"></li>
+    <li class="li_ph"><img src="../images/ajax.png" class="ph"><img src="../images/xx.png"  class="xx"></li>
+</ul>
+
+<script>
+    $(document).ready(function () {
+        $(".xx").bind("click",function (event) {
+//            console.log("xxx");
+            console.log($(this).parent().attr("class"))
+            $(this).parent().remove()
+        })
+    })
+</script>
+
 </body>
 </html>

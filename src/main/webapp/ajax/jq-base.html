@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq-base</title>
+    <script src="../js/jquery/jquery-1.12.0.js"></script>
+</head>
+<body>
+<div>
+    <h2>jquery 基础</h2>
+
+    <pre>
+        jquery 选择器：
+
+        id选择器：      id="xxx"   ----> $('#xxx')
+        class选择器：   class="xxx"----> $(".xxx")
+        标签element选择器：    ul,li,input,div,img    ---> $("div")
+
+        fuzi ：  $("#id_a  .class_b")
+
+    </pre>
+
+    <div>
+        asdfsdfs
+        <script>
+            function labelSelectSimple(){
+                console.log($("h2").html())
+            }
+            function labelSelect(p) {
+                console.log($(p))
+            }
+        </script>
+    </div>
+</div>
+</body>
+</html>

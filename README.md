@@ -10,7 +10,7 @@
 ## how to run
 1. [install java 1.8](#java)
 2. [install maven](#maven)
-2. [clone code and run](#run)
+3. [clone code and run](#run)
 
 
 
@@ -20,12 +20,16 @@
 
 ## <a name="java"/>install java 1.8
 1. download from https://yunpan.cn/cR2GuInzbzWfh （提取码：a6c7）
-2. double-click and install to your windows and make sure the install path contains no Chinese
+2. double-click and install to your windows and make sure the install path contains no Chinese,
+ 注意，安装的过程中，第一次选择安装位置，这个是jdk的位置，比如你设置为D:\Java\jdk1.8.0_73，会第二次弹出窗口，
+ 这个jre的位置，你随便指定一个位置即可，不要和jdk的位置相同。
+
 3. find the install path, it may like
 >     D:\Java\jdk1.8.0_73
 4. add to System environment 添加到环境变量。
->    右键我的电脑-》属性-》高级系统设置-》环境变量-》新建 JAVA_HOME:D:\Java\jdk1.8.0_73
+>    右键我的电脑-》属性-》高级系统设置-》环境变量-》在系统变量中：新建 JAVA_HOME:D:\Java\jdk1.8.0_73
 ![javahome](src/main/webapp/images/javahome.png "JAVA_HOME")
+> 新建classpath:.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar
 >    将%JAVA_HOME%/bin;追加到path环境变量。若path变量结尾没有分号，则先添加分号，注意是英文的分号
 ![path](src/main/webapp/images/path.png "path")
 5. 测试是否安装成功。   打开命令提示符（开始》运行》cmd 或win+r 输入cmd）输入java -version 和javac -version。如果显示如下则安装成功
