@@ -10,7 +10,7 @@
 ## how to run
 1. [install java 1.8](#java)
 2. [install maven](#maven)
-2. [clone code and run](#run)
+3. [clone code and run](#run)
 
 
 
