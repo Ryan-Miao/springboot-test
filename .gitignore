@@ -21,3 +21,17 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+_windows/
+colors/
+inspection/
+colors.scheme.xml
+debugger.xml
+diff.xml
+editor.xml
+ide.general.xml
+project.default.xml
+ui.lnf.xml
+vcs.xml
+web-browsers.xml
+IntelliLang.xml
