@@ -9,7 +9,6 @@ logging:
 
 
 spring:
-  profiles.active: dev
   datasource:
     url: "jdbc:mysql://localhost/springboot?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=false"
     username: "root"
