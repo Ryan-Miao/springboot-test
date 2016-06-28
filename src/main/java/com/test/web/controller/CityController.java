@@ -1,5 +1,6 @@
 package com.test.web.controller;
 
+import com.github.pagehelper.PageHelper;
 import com.test.domain.dao.model.City;
 import com.test.domain.service.ICityService;
 import org.slf4j.Logger;
@@ -27,6 +28,9 @@ public class CityController {
     @ResponseBody
     @RequestMapping("")
     public List<City> getAll(City city){
+        if (city.getPage() != null && city.getRows() != null) {
+            PageHelper.startPage(city.getPage(), city.getRows(), "id");
+        }
         List<City> all = cityService.getAll(city);
         logger.info("{}",all);
 
