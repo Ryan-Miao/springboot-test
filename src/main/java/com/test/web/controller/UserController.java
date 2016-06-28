@@ -31,7 +31,7 @@ public class UserController {
 
     @RequestMapping("addUser" )
     public RestResponse add(User user){
-        RestResponse restResponse = new RestResponse();
+        RestResponse<User> restResponse = new RestResponse<>();
         try {
             user = userService.addUser(user);
             restResponse.setData(user).setStatus(ResponseStatus.Ok);
@@ -45,10 +45,10 @@ public class UserController {
 
     @RequestMapping("deleteUser")
     public RestResponse delete(int id){
-        RestResponse restResponse = new RestResponse();
-        boolean flag= false;
+        RestResponse<String> restResponse = new RestResponse();
+        boolean flag;
         try {
-            flag = userService.delete(id);
+            userService.delete(id);
             restResponse.setData("").setStatus(ResponseStatus.Ok);
         } catch (Exception e) {
             String msg = "delete user failed";

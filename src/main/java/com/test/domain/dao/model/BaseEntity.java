@@ -42,7 +42,7 @@ public class BaseEntity {
     private Integer page = 1;
 
     @Transient
-    private Integer rows = 10;
+    private Integer rows = 1;
 
     public Integer getId() {
         return id;

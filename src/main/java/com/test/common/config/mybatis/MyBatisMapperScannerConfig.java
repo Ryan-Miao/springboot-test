@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.test.common.config;
+package com.test.common.config.mybatis;
 
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
@@ -50,7 +50,7 @@ public class MyBatisMapperScannerConfig {
         Properties properties = new Properties();
         properties.setProperty("mappers", "com.test.domain.dao.BaseMapper");
         properties.setProperty("notEmpty", "false");
-        properties.setProperty("IDENTITY", "mysql");
+        properties.setProperty("IDENTITY", "h2");
         mapperScannerConfigurer.setProperties(properties);
         return mapperScannerConfigurer;
     }

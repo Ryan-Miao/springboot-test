@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package com.test.common.config;
+package com.test.common.config.mybatis;
 
 import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.plugin.Interceptor;
