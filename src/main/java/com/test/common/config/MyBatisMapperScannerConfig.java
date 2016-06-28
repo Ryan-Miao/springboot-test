@@ -50,7 +50,7 @@ public class MyBatisMapperScannerConfig {
         Properties properties = new Properties();
         properties.setProperty("mappers", "com.test.domain.dao.BaseMapper");
         properties.setProperty("notEmpty", "false");
-        properties.setProperty("IDENTITY", "MYSQL");
+        properties.setProperty("IDENTITY", "mysql");
         mapperScannerConfigurer.setProperties(properties);
         return mapperScannerConfigurer;
     }
