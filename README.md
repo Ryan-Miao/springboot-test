@@ -12,6 +12,16 @@
 2. [install maven](#maven)
 3. [clone code and run](#run)
 
+## run
+> mvn spring-boot:run
+
+## debug
+```
+mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
+```
+在idea中，Run->edit configuration -> + -> remote 确定 debug
+
+
 
 
 
